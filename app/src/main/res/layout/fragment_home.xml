@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="top">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            >
+
+
+            <LinearLayout
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#880E4F"
+
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="109dp"
+                    android:layout_height="86dp"
+                    tools:src="@tools:sample/avatars" />
+                <TextView
+                    android:id="@+id/home_name"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome, "
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:inputType="number"
+                    />
+
+                <TextView
+                    android:id="@+id/home_phone"
+                    android:layout_width="250dp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number: "
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:id="@+id/home_balance"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="balance: "
+                    android:textSize="15dp"
+                    />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!--    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
+        <!--    <LinearLayout-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="match_parent"-->
+        <!--        android:orientation="vertical"-->
+        <!--        android:layout_gravity="center">-->
+
+        <!--    <LinearLayout-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:background="#880E4F"-->
+        <!--        android:padding="20dp"-->
+        <!--        android:orientation="vertical"-->
+        <!--        android:layout_gravity="center">-->
+
+
+        <!--    </LinearLayout>-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/home_send_btn"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:clickable="true"
+                android:layout_margin="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/outline_attach_money_24">
+
+                </ImageView>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Send Money"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/home_history_btn"
+                android:layout_width="150dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/home_send_btn">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/outline_currency_exchange_20">
+
+                </ImageView>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Transaction History" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/home_Update_btn"
+                android:layout_marginTop="20dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:clickable="true"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@+id/home_send_btn"
+                app:layout_constraintTop_toBottomOf="@+id/home_send_btn">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/outline_tips_and_updates_20">
+
+                </ImageView>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Update Profile" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/home_logout_btn"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:clickable="true"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@+id/home_history_btn"
+                app:layout_constraintTop_toTopOf="@+id/home_Update_btn">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/outline_logout_20">
+
+                </ImageView>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Log Out" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/home_delete_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:text="Delete Account"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
+
